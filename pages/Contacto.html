@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <nav class="NavBar">
+            <ul class="NavBar_List">
+                <li class="NavBar_Items"> 
+                    <a class="Nav_Link" href="../index.html">Home</a>
+                </li>
+                <li class="NavBar_Items">
+                    <a class="Nav_Link" href="./pages/Acercade.html">Acerca de</a>
+                    <ul class="SubMenu">
+                        <li class="SubMenu_items"> <a href="#">Nuestro catalogo</a> </li>
+                        <li class="SubMenu_items"> <a href="#">Envios a domicilio</a> </li>
+                        <li class="SubMenu_items"> <a href="#">La tienda</a> </li>
+                    </ul>
+                    </ul>
+                </li>
+                <li class="NavBar_Items">
+                    <a class="Nav_Link" href="./Servicios.html">Servicios</a>
+                </li>
+                <li class="NavBar_Items">
+                    <a class="Nav_Link active" href="./Contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor">    	
+        <h1>FORMULARIO</h1>
+        <form action="../assets/php/index.php" method="post">
+        <div class="row">
+            <input type="text" placeholder=" Escriba su nombre aqui" name="nombre" required class="input"> <br><br>
+            <input type="text" placeholder=" Escriba su apellido aqui" name="apellido"required class="input"> <br><br>
+            <input type="mail" placeholder=" Escriba su mail aqui" name="mail"required class="input"> <br><br> 
+
+               <label for="Procedencia" class="etiqueta_p">Procedencia:</label>
+                 <select required id="Procedencia" class="Procedencia" onchange="ocultarLabel()">
+                 <option value=""> </option>
+                     <option value="America">America</option>
+                     <option value="Antartida">Antartida</option>
+                     <option value="Africa">Africa</option>
+                     <option value="Asia">Asia</option>
+                     <option value="Europa">Europa</option>
+                     <option value="Oceania">Oceania</option>
+                 </select> <br><br>
+            
+                 Opinion: <br> <br>
+                 <textarea  cols="40" rows="8" placeholder=" Dejenos saber su Opinion" required></textarea> <br>
+            
+                 <input type="reset" value="Borrar" class="button">
+                 <input type="submit" value="Enviar" class="button">
+           
+        </form>
+    </div>
+    <script>
+        function ocultarLabel(){
+            let label = document.querySelector('.etiqueta_p');
+            label.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
