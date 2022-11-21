@@ -8,8 +8,6 @@
 body{
     background: linear-gradient(to bottom right,#e4aaf3,#dfb4b4,#9ec3f1);  
 font-family: 'Archivo Narrow', sans-serif;
-background-repeat: no-repeat;
-background-size: cover;
 }
 html{
     scroll-behavior: smooth;
