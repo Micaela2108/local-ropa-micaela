@@ -59,6 +59,7 @@ header .Crear-cuenta :hover{
 color: blueviolet;
 }
 .menu-bar{
+    margin-top: 0%;
     display: none;
 }
 .lineal {
@@ -88,8 +89,9 @@ main{
     justify-content: center;
 }
 .NavBar_List{
-display: flex;
-justify-content: space-around;
+    list-style: none;
+    overflow: hidden;
+    background-color: #9ec3f1;
 }
 .NavBar_Items{
     display: inline-block;
@@ -362,10 +364,6 @@ justify-content: center;
 height: auto;
 flex-direction: column;
 }
-.NavBar{
-    grid-area: nav;
-    padding: 10% 0%;
-}
 section.content{
 grid-area: content;
 background:#dfb4b4;
@@ -410,14 +408,6 @@ main{
         text-align: center;
         color: black;
     }
-    .navbar{
-        grid-area: nav;
-        padding: 10% 0%;
-        width: 80%;
-        height: 100%;
-        margin: 0;
-        position: fixed;
-    }
     section.content{
     grid-area: content;
     background:#dfb4b4;
@@ -456,13 +446,42 @@ main{
         height: auto;
         flex-direction: column;
         }
-        .navbar{
-            grid-area: nav;
-            padding: 10% 0%;
-            width: 80%;
+        .menu-bar{
+            display: block;
+            width: 100%;
+            background-color: #c0a4a4;
+            margin-top: 0%;
+        }
+        .menu-bar .btn-menu{
+            display: block;
+            width: 20%;
+            height: 80%;
+            z-index: 2;
+            margin-left: -1%;
+            margin-top: -52%;
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .NavBar_List{
+            display:end;
+            z-index: 1;
+            width: auto;
             height: 100%;
-            margin: 0;
+            margin-left: auto;
+            margin-top: 0%;
+            padding-top: 25px;
             position: fixed;
+        }
+        header nav ul li{
+            display: block;
+            float: left;
+            border-bottom:1px solid rgb(122, 88, 113);
         }
         .footer2{
             text-align: center;
@@ -507,14 +526,6 @@ main{
             .footer2{
                 text-align: center;
                 color: black;
-            }
-            .navbar{
-                grid-area: nav;
-                padding: 10% 0%;
-                width: 80%;
-                height: 100%;
-                margin: 0;
-                position: fixed;
             }
             section.content{
             grid-area: content;
