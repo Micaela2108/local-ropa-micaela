@@ -1,8 +1,8 @@
-*{
+*,*:before,*:after{
     margin: 0;
     padding: 0;
+    outline: 0;
     box-sizing: border-box;
-    list-style-type: none;
 }
 @import url('https://fonts.googleapis.com/css2? family= Archivo+Narrow:ital@1 & display=swap');
 body{
@@ -14,7 +14,6 @@ html{
 }
 .Container{
     width: 100%;
-    margin-bottom: 10px;
 }
 header .Container{
     display: flex;
@@ -58,8 +57,13 @@ header .Crear-cuenta{
 header .Crear-cuenta :hover{
 color: blueviolet;
 }
-.menu-bar{
-    margin-top: 0%;
+.NavBar_List.show{
+    top: 65px;
+}
+.btn-menu{
+    margin-right: 30px;
+    font-size: 25px;
+    cursor: pointer;
     display: none;
 }
 .lineal {
@@ -446,19 +450,13 @@ main{
         height: auto;
         flex-direction: column;
         }
-        .menu-bar{
-            display: block;
-            width: 100%;
-            background-color: #c0a4a4;
-            margin-top: 0%;
-        }
-        .menu-bar .btn-menu{
-            display: block;
+        .btn-menu{
+            display: inline-flex;
             width: 20%;
             height: 80%;
             z-index: 2;
-            margin-left: -1%;
-            margin-top: -52%;
+            margin-left: 5%;
+            margin-top: -70%;
             padding: 20px;
             text-decoration: none;
             color: white;
@@ -469,10 +467,13 @@ main{
             box-sizing: border-box;
         }
         .NavBar_List{
-            display:end;
+            display:block;
             z-index: 1;
             width: auto;
             height: 100%;
+            transition: all .4s;
+            text-align: center;
+            flex-direction: column;
             margin-left: auto;
             margin-top: 0%;
             padding-top: 25px;
